@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyHub — Smart Learning for College</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="StudyHub" class="brand-logo">
+        <span class="brand-text">StudyHub</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="home.html">Explore</a>
+        <a href="notes.html">Notes</a>
+        <a href="#features">Features</a>
+        <!-- <button class="btn primary" id="openSignIn">Sign in</button> -->
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Smart study — built for college success</h1>
+          <p class="lead">Organized notes, interactive timetables, assignment tracking and curated resources — all in one place.</p>
+          <div class="hero-cta">
+            <a class="btn primary large" href="home.html">Get Started — Free</a>
+            <a class="btn ghost" href="notes.html">View Notes</a>
+          </div>
+
+          <ul class="trust-bar">
+            <li><strong>1000+</strong> notes</li>
+            <li><strong>500+</strong> resources</li>
+            <li><strong>4.9</strong>/5 student rating</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <img src="images/hero-illustration.svg" alt="Study illustration" class="hero-illustration">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <article class="feature">
+        <img src="images/icons/notes.png" alt="Notes" class="feature-icon">
+        <h3>Subject-wise Notes</h3>
+        <p>Concise, exam-oriented notes with downloadable PDFs.</p>
+      </article>
+      <article class="feature">
+        <img src="images/icons/assignments.png" alt="Assignments" class="feature-icon">
+        <h3>Assignment Manager</h3>
+        <p>Track due dates, upload submissions and get reminders.</p>
+      </article>
+      <article class="feature">
+        <img src="images/icons/timetable.png" alt="Timetable" class="feature-icon">
+        <h3>Smart Timetable</h3>
+        <p>Auto-generate study slots and sync with your classes.</p>
+      </article>
+      <article class="feature">
+        <img src="images/icons/resources.png" alt="Resources" class="feature-icon">
+        <h3>Curated Resources</h3>
+        <p>Top courses, videos and reading material handpicked for you.</p>
+      </article>
+    </section>
+
+    <section class="testimonials container">
+      <h2>What students say</h2>
+      <div class="test-grid">
+        <figure class="testimonial">
+          <img src="images/testimonial-1.jpg" alt="student">
+          <blockquote>“StudyHub made my semester simple — notes and deadlines in one place.”</blockquote>
+          <figcaption>— Ankit, Computer Science</figcaption>
+        </figure>
+        <figure class="testimonial">
+          <img src="images/testimonial-1.jpg" alt="student">
+          <blockquote>“Love the card style notes — quick to revise.”</blockquote>
+          <figcaption>— Riya, IT</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta container">
+      <h2>Ready to learn smarter?</h2>
+      <a class="btn primary large" href="sign.html">Create your free account</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>&copy; 2025 Study Hub | Made with ❤</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sign in modal (simple) -->
+  <div class="modal" id="signinModal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" id="closeSignIn">✕</button>
+      <h3>Sign in to StudyHub</h3>
+      <form id="signinForm">
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" required>
+        </label>
+        <div class="modal-actions">
+          <button class="btn primary" type="submit">Sign in</button>
+          <button class="btn ghost" type="button" id="modalCancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!-- home.html (only body shown, head should link style.css + script.js similar to index.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyHub — Dashboard</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <!-- reuse the same header (copy from index.html) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="StudyHub" class="brand-logo">
+        <span class="brand-text">StudyHub</span>
+      </a>
+    </div>
+  </header>
+
+  <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="notes.html">Notes</a>
+        <a href="https://csjmu.ac.in/wp-content/uploads/syllabus-campus-before-2022/2021/BCA%20Syllabus%20-%20applicable%20from%202021.pdf">Syllabus</a>
+        <a href="PYQS.html">PYQ'S</a>
+      </nav>
+
+  <main class="container dashboard">
+    <section class="dashboard-grid">
+      <div class="card big">
+        <h2>Welcome, <span id="studentName"></span>!</h2>
+        <p>Next: Data Structures lecture at 10:00 AM</p>
+        <div class="card-actions">
+          <a class="btn primary" href="timetable.html">Open Timetable</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Quick Links</h3>
+        <ul class="quick-links">
+          <li><a href="notes.html">My Notes</a></li>
+          <li><a href="assignments.html">Assignments</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Recent Notes</h3>
+        <ul class="recent-notes">
+          <li>C Programming — Loops</li>
+          <li>OS — Deadlock</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><center>&copy; 2025 Study Hub | Made with ❤</center></div>
+    </div>
+  </footer>
+
+  <script>
+  // Get stored name
+  const name = localStorage.getItem("studentName");
+  const nameElement = document.getElementById("studentName");
+
+  if(name) {
+    nameElement.textContent = name;
+  } else {
+    // If no name stored, redirect to registration page
+    window.location.href = "sign.html";
+  }
+</script>
+</body>
+</html>

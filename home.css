@@ -1,0 +1,227 @@
+/* home.css - Dashboard styles for home.html */
+
+/* Body as flex container */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  background: #f6f8fb;
+}
+
+/* Main content grows to fill space */
+.main {
+  flex: 1;
+}
+
+/* Footer */
+.site-footer {
+  background: #07122a;
+  color: #cfe0ff;
+  padding: 20px 0;
+  flex-shrink: 0; /* do not shrink */
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 25px 10px;
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  color: white;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+nav a {
+  text-decoration: none;
+  color: #2a5298;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background: #2a5298;
+  color: white;
+}
+header .brand {
+  display: inline-flex;            /* inline-flex keeps it centered */
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+header .brand-logo {
+  height: 50px;                   /* bigger logo for better balance */
+  width: auto;
+}
+
+header .brand-text {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Navigation
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav a {
+  color: #6b7280;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #2a5298;
+  background: rgba(42,82,152,0.1);
+} */
+
+/* Dashboard grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 40px 0;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(12,24,40,0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(12,24,40,0.12);
+}
+
+.card.big {
+  grid-column: span 2;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  color: #2a5298;
+}
+
+.card p {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.card-actions {
+  margin-top: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn.primary {
+  background: #2a5298;
+  color: #fff;
+  border: none;
+}
+
+.btn.primary:hover {
+  background: #1e3c72;
+}
+
+/* Quick Links & Recent Notes */
+.quick-links,
+.recent-notes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li,
+.recent-notes li {
+  margin-bottom: 8px;
+}
+
+.quick-links li a {
+  text-decoration: none;
+  color: #2a5298;
+  transition: color 0.2s;
+}
+
+.quick-links li a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    display: none;
+  }
+}
